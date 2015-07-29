@@ -1,0 +1,60 @@
+<header class="navbar navbar-default" role="navigation">
+    <div class="navbar-inner">
+      <div class="container">
+        <div id="logo" class="navbar-brand"><%= link_to "Raddit", root_path %></div>
+        <nav class="collapse navbar-collapse navbar-ex1-collapse">
+        	<% if user_signed_in? -%>
+				<ul class="nav navbar-nav navbar-right">
+					<li><%= link_to 'Submit YouR Link', new_link_path %></li>
+					<li><%= link_to 'Account', edit_user_registration_path %></li>
+					<li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
+				</ul>
+			<% else %>
+				<ul class="nav navbar-nav pull-right">
+					<li><%= link_to 'Sign up', new_user_registration_path %></li>
+					<li><%= link_to 'Sign in', new_user_session_path %></li>
+				</ul>
+			<% end -%>
+        </nav>
+      </div>
+    </div>
+ 
+
+
+		<ul class = "nav navbar-nav navbar-left">
+			<li >
+			
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">About</button>
+					<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  						<div class="modal-dialog modal-lg">
+   						 <div class="modal-content" >
+      						This is an app i built for my profolieo fully functional.
+      						Users can post a favorit link fromt he web what they like to share with other users.
+      						This app uses couple of gem such as 'devise' for authintication,'bootstrap-sass' for style,acts_as_votable for user votes on links and simple_form.
+    					 </div>
+  						</div>
+					</div>
+			</li>
+
+			<li>
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Contact me</button>
+					<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+						<div class="modal-dialog modal-sm">
+						 <!-- <div class="modal-content"> -->
+						<a target="_blank" title="follow us on facebook" href="https://www.facebook.com/alwan.mortada"><img alt="follow us on facebook" src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook30x30.png" border=0></a>
+
+       					<a target="_blank" title="follow us on Twitter" href="https://twitter.com/mortada_alwan"><img alt="follow us on Twitter" src="https://c866088.ssl.cf3.rackcdn.com/assets/twiiter30x30.png" border=0></a>				
+
+        				<a target="_blank" title="follow us on instagram" href="https://instagram.com/alwanmortada/"><img alt="follow us on instagram" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram30x30.png" border=0></a>				
+
+        				<a target="_blank" title="follow us on wordpress" href="https://theegrasshopper.wordpress.com/"><img alt="follow us on instagram" src="https://s.w.org/about/images/logos/wordpress-logo-32-blue.png" border=0></a>					
+  					 	</div>
+					</div>
+			</li>
+
+			<li>
+				<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.yahoo.com" data-via="mortada_alwan" data-related="GA_ATX">Tweet</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			</li>
+		</ul>
+ </header>
