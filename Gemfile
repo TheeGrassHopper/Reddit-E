@@ -7,8 +7,6 @@ gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'simple_form'
 
-gem 'puma'
-gem 'rails_12factor', group: :production
 
 
 
@@ -55,6 +53,6 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  gem 'ruby', '~> 2.1.2'
+
 end
 
